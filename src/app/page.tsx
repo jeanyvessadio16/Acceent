@@ -4,6 +4,7 @@ import About from "@/components/shared/About";
 import Contact from "@/components/shared/Contact";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,15 +15,15 @@ export default function Home() {
         <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center">
           {/* Background Image*/}
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
+            className="absolute inset-0 bg-cover bg-to bg-no-repeat w-full h-full"
             style={{
-              backgroundImage: "url('/image/banner.jpg')",
+              backgroundImage: "url('/image/acceentImage.jpg')",
               backgroundAttachment: "fixed",
             }}
           ></div>
 
           {/* Elegant Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/90 via-primary/70 to-primary/40 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/90 via-primary/70 to-primary/40"></div>
 
           {/* Contentu */}
           <div className="relative z-10 container px-6 mx-auto flex flex-col items-center text-center space-y-3 animate-in fade-in slide-in-from-bottom-8 duration-1000">
@@ -34,9 +35,9 @@ export default function Home() {
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white max-w-4xl leading-tight">
               Bienvenue à{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
+              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-secondary-foreground">
                 Acceent
-              </span>
+              </strong>
             </h1>
 
             <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl leading-relaxed uppercase tracking-wide">
@@ -57,7 +58,9 @@ export default function Home() {
                 variant="outline"
                 className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 rounded-full px-8 py-6 text-base font-bold bg-transparent"
               >
-                Découvrir nos actions
+                <Link href="#programmes" className="flex items-center gap-2">
+                  Découvrir nos programmes
+                </Link>
               </Button>
             </div>
           </div>

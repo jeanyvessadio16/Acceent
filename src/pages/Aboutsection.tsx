@@ -37,9 +37,9 @@ export default function AboutSection({ title, description }: Section) {
       </section>
 
       {/* PROGRAMMES SECTION */}
-      <section className="px-6 pb-24 md:px-10 relative">
+      <section id="programmes" className="px-10 relative">
         {/* Subtle background decoration */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16 space-y-4">
@@ -53,7 +53,7 @@ export default function AboutSection({ title, description }: Section) {
           </div>
 
           {/* Les trois piliers */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+          <div className="py-10 grid grid-cols-1 lg:grid-cols-3 gap-8 text-left">
             {programmes.map((programme, idx) => (
               <Card
                 key={programme.id || idx}

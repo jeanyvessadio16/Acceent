@@ -15,6 +15,7 @@ export default function Header() {
   const navbarItems = [
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/#about" },
+    // { name: "Programmes", href: "/#programmes" },
     { name: "Contact", href: "/#contact" },
   ];
 
@@ -57,7 +58,7 @@ export default function Header() {
                 <li key={item.href} className="relative group">
                   <Link
                     href={item.href}
-                    className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
+                    className={`text-md font-medium tracking-wide transition-colors duration-300 ${
                       isActive
                         ? "text-secondary font-semibold"
                         : "text-gray-200 hover:text-white"

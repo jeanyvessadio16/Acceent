@@ -9,10 +9,10 @@ import { Send } from "lucide-react";
 export default function Contact() {
   return (
     <>
-      <section className="py-24 px-6 md:px-10 bg-accent flex flex-col justify-center items-center space-y-12">
+      <section className="py-24 px-6 md:px-10 bg-gray-50 flex flex-col justify-center items-center space-y-12">
         {/* titre et description */}
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-primary">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-primary">
             Contactez-nous
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">

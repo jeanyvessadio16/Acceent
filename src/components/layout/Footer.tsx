@@ -11,8 +11,8 @@ export default function Footer() {
         <div>
           <Image
             src="/logo/logo-acceent.png"
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             alt="Logo Acceent"
           />
         </div>

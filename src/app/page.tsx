@@ -2,6 +2,7 @@
 
 import About from "@/components/shared/About";
 import Contact from "@/components/shared/Contact";
+import Partenaire from "@/components/shared/Partenaire";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -70,6 +71,14 @@ export default function Home() {
         <section id="about" className="bg-white relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <About />
+        </section>
+
+        {/* Partenaires section */}
+        <section
+          id="partenaires"
+          className="px-10 py-24 bg-gray-100 relative overflow-hidden"
+        >
+          <Partenaire />
         </section>
 
         {/* Contact section */}

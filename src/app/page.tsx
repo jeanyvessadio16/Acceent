@@ -27,26 +27,26 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/90 via-primary/70 to-primary/40"></div>
 
           {/* Contentu */}
-          <div className="relative z-10 container px-6 mx-auto flex flex-col items-center text-center space-y-3 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            <div className="inline-block px-4 py-1.5 rounded-full border border-secondary/30 bg-secondary/10 backdrop-blur-sm mb-4">
+          <div className="relative z-10 container px-6 mx-auto flex flex-col items-center text-center space-y-3">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-secondary/30 bg-secondary/10 backdrop-blur-sm mb-4 animate-hero-badge">
               <span className="font-medium tracking-wider text-sm text-white uppercase">
                 Association Senégalaise
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white max-w-4xl leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white max-w-4xl leading-tight animate-hero-title">
               Bienvenue à{" "}
               <strong className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-secondary-foreground">
                 Acceent
               </strong>
             </h1>
 
-            <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl leading-relaxed uppercase tracking-wide">
+            <p className="text-gray-200 text-lg md:text-xl font-medium max-w-3xl leading-relaxed uppercase tracking-wide animate-hero-description">
               Action pour la Contribution Collective pour l&apos;Education,
               l&apos;Entrepreneuriat et le Numérique des Territoires
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 animate-hero-buttons">
               <Button
                 size="lg"
                 className="w-full sm:w-auto bg-secondary text-white hover:bg-secondary/90 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(251,191,36,0.3)] rounded-full px-8 py-6 text-base font-bold group"

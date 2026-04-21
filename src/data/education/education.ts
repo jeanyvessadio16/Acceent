@@ -1,4 +1,4 @@
-import { programmesEducation } from "@/types/educationHeader";
+import { programmesEducation } from "@/types/bannerHeader";
 
 export const educationPrograms: programmesEducation[] = [
   {
@@ -16,13 +16,5 @@ export const educationPrograms: programmesEducation[] = [
       "Développement de la pensée critique et soutien familial pour une meilleure éducation des enfants.",
     image: "/image/tut-tank.jpeg",
     lien: "/education/programme2",
-  },
-  {
-    id: 3,
-    titre: "Programme de mentorat",
-    description:
-      "Un programme de mentorat pour accompagner les étudiants dans leur parcours académique et les aider à atteindre leurs objectifs.",
-    image: "/image/tut-tank.jpeg",
-    lien: "/education/programme3",
   },
 ];

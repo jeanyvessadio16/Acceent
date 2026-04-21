@@ -1,5 +1,7 @@
 "use client";
 
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import About from "@/components/shared/About";
 import Contact from "@/components/shared/Contact";
 import Partenaire from "@/components/shared/Partenaire";
@@ -10,6 +12,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
+      {/* Header */}
+      <Header />
       {/* Page d'acceuil */}
       <main className="w-full flex flex-col overflow-hidden">
         {/* HERO SECTION */}
@@ -83,6 +87,9 @@ export default function Home() {
           <Contact />
         </section>
       </main>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

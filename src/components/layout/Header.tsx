@@ -3,11 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Menu } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // liens items
   const navbarItems = [
@@ -19,7 +29,9 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full px-6 md:px-10 py-3 flex items-center justify-between bg-primary/90 backdrop-blur-sm border-b border-gray-800 fixed top-0 left-0 z-50">
+      <header
+        className={`w-full px-6 md:px-10 py-3 flex items-center justify-between ${isScrolled ? "bg-primary/90 backdrop-blur-sm border-b border-gray-800" : "bg-transparent"} fixed top-0 left-0 z-50 transition-all duration-300`}
+      >
         {/* logo ACCEENT */}
         <Link href="/" className="flex items-center gap-2">
           <Image

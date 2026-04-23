@@ -7,13 +7,22 @@ import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "../ui/dialog";
 
 export default function ContactForm() {
   const [result, setResult] = useState("");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -32,7 +41,13 @@ export default function ContactForm() {
     });
 
     const responseData = await response.json();
-    setResult(responseData.success ? "Success!" : "Error");
+    if (responseData.success) {
+      setResult("Message envoyé avec succès !");
+      setIsDialogOpen(true);
+      reset();
+    } else {
+      setResult("Erreur lors de l'envoi.");
+    }
   };
 
   return (
@@ -111,6 +126,18 @@ export default function ContactForm() {
           </CardContent>
         </Card>
       </section>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="bg-white">
+          <DialogHeader>
+            <DialogTitle>Message envoyé !</DialogTitle>
+            <DialogDescription>
+              Votre message a été envoyé avec succès. Nous vous répondrons
+              bientôt.
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

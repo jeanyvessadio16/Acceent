@@ -13,7 +13,7 @@ export default function TuttankPage() {
 
       <section className="min-h-screen flex flex-col justify-center items-center">
         <div>
-          <h1>TUTTANK PRGRAMME</h1>
+          <h1>TUTTANK PRGRAMME EN DEVELOPPEMENT</h1>
         </div>
       </section>
 

@@ -8,8 +8,21 @@ import Partenaire from "@/components/shared/Partenaire";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <>
       {/* Header */}
@@ -23,7 +36,7 @@ export default function Home() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
             style={{
               backgroundImage: "url('/image/banner.jpg')",
-              backgroundAttachment: "fixed",
+              backgroundAttachment: isMobile ? "scroll" : "fixed",
             }}
           ></div>
 

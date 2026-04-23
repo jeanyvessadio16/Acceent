@@ -8,7 +8,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "ACCEENT – Éducation, Culture et Numérique à Ziguinchor",
+  title: "ACCEENT",
   description:
     "ACCEENT est une association à Ziguinchor qui œuvre pour l'éducation, la culture, l'entrepreneuriat et le numérique. Découvrez nos programmes ACCEENT4ELLES, TUT'TANK, ACCEENT'INCUB et nos actions locales pour le développement du territoire sénégalais.",
 };

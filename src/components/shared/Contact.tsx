@@ -52,15 +52,15 @@ export default function ContactForm() {
 
   return (
     <>
-      <section className="flex flex-col justify-center items-center px-10 py-16">
-        <Card className="max-w-xl md:min-w-xl max-md:w-96 bg-white">
-          <CardHeader className="p-5">
+      <section className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-10 py-16">
+        <Card className="w-full max-w-md sm:max-w-lg md:max-w-xl bg-white">
+          <CardHeader className="p-4 sm:p-5">
             <CardTitle className="text-2xl text-center font-bold">
-              CONTATEZ-NOUS
+              CONTACTEZ-NOUS
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-2.5">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
                 <Label htmlFor="name" className="text-lg">
                   Prénom & nom <span className="text-red-800">*</span>

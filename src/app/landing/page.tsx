@@ -67,8 +67,8 @@ export default function Acceent4ELLES() {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                   <BookOpen className="w-6 h-6 text-primary" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                  Le programme propose un accompagnement global
+                <h2 className="text-3xl max-sm:text-2xl md:text-4xl font-bold text-primary">
+                  Le programme d&apos;accompagnement
                 </h2>
               </div>
               <details>
@@ -101,7 +101,7 @@ export default function Acceent4ELLES() {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
                   <Award className="w-6 h-6 text-secondary" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary">
+                <h2 className="text-3xl max-sm:text-2xl md:text-4xl font-bold text-primary">
                   Notre approche
                 </h2>
               </div>

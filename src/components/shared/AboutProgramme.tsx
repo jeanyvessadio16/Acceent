@@ -15,7 +15,7 @@ export default function AboutPrgramme({
     <>
       <section className="px-10">
         <div className="text-center space-y-4 mb-8">
-          <h1 className="text-4xl font-bold"> {titre} </h1>
+          <h1 className="text-4xl max-md:text-3xl font-bold"> {titre} </h1>
           <p className="text-lg"> {description} </p>
         </div>
         {children}

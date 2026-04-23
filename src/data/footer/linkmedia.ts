@@ -5,11 +5,6 @@ export const mediaLinks = [
     icon: "/logo/media-social/facebook.svg",
   },
   {
-    name: "Twitter",
-    href: "#",
-    icon: "/logo/media-social/twitter.svg",
-  },
-  {
     name: "Instagram",
     href: "https://www.instagram.com/campus_acceent?igsh=ZGxrbGtoYzJkd2Zn",
     icon: "/logo/media-social/instagram.svg",

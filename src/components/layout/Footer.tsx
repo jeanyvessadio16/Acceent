@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-primary/80 backdrop-blur-md border-t border-white/10 text-white">
       {/* contenu principal */}
-      <div className="px-10 py-10 text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-between gap-10">
+      <div className="px-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* logo */}
         <div>
           <Image
@@ -33,9 +33,9 @@ export default function Footer() {
         </div>
 
         {/* contact */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col">
           <h3 className="text-2xl font-bold mb-2">Contact</h3>
-          <ul className="space-y-3 flex flex-col items-center">
+          <ul className="space-y-3 flex flex-col">
             <li className="flex items-center gap-3">
               <MapPin />
               <span>Quartier Santhiaba, Ziguinchor, Sénégal</span>
@@ -54,7 +54,7 @@ export default function Footer() {
         {/* reséaux sociaux */}
         <div>
           <h3 className="text-2xl font-bold mb-2">Suivez-nous</h3>
-          <ul className="flex justify-center items-center gap-3">
+          <ul className="flex gap-3">
             {mediaLinks.map((link) => (
               <li key={link.name} className="p-2 bg-white/50 rounded">
                 <Link

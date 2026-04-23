@@ -17,7 +17,7 @@ export default function Home() {
       {/* Page d'acceuil */}
       <main className="w-full flex flex-col overflow-hidden">
         {/* HERO SECTION */}
-        <section className="w-full relative min-h-screen flex items-center justify-center">
+        <section className="w-full relative min-h-screen sm:max-h-96 flex items-center justify-center">
           {/* Background Image*/}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"

@@ -19,13 +19,13 @@ export default function AboutSection({ description }: Section) {
           <div className="space-y-8">
             {/* Titre */}
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-6xl font-bold text-primary leading-tight">
+              <h2 className="text-3xl md:text-6xl font-bold text-primary leading-tight">
                 Qui sommes-nous ?
               </h2>
               {/* <div className="w-32 h-2 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div> */}
             </div>
             {/* Description */}
-            <p className="text-lg md:text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl max-md:text-justify leading-relaxed text-gray-700 max-w-3xl mx-auto">
               {description}
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function AboutSection({ description }: Section) {
                 </h2>
                 <div className="w-24 h-1 bg-accent rounded-full"></div>
               </div>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-700">
+              <p className="text-lg md:text-xl max-md:text-justify  leading-relaxed text-gray-700">
                 Acceent s&apos;engage à autonomiser les populations locales,
                 notamment les jeunes et les femmes, en leur offrant des outils
                 adaptés pour surmonter les défis socio-économiques.
@@ -163,7 +163,7 @@ export default function AboutSection({ description }: Section) {
                   Carnaval de Santhiaba
                 </h2>
               </div>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-700">
+              <p className="text-lg md:text-xl max-md:text-justify  leading-relaxed text-gray-700">
                 Acceent joue un rôle clé dans la promotion de la culture comme
                 levier de développement durable. Elle est notamment partenaire
                 central du Carnaval de Santhiaba, un événement qui célèbre la

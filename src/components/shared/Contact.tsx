@@ -53,7 +53,7 @@ export default function ContactForm() {
   return (
     <>
       <section className="flex flex-col justify-center items-center px-10 py-16">
-        <Card className="max-w-xl min-w-xl bg-white">
+        <Card className="max-w-xl md:min-w-xl max-md:w-96 bg-white">
           <CardHeader className="p-5">
             <CardTitle className="text-2xl text-center font-bold">
               CONTATEZ-NOUS

@@ -17,7 +17,7 @@ export default function Education() {
     <>
       <LayoutHeader {...educationHeader}></LayoutHeader>
       <section className="px-10 py-16">
-        <h2 className="text-4xl text-center text-accent mb-16 font-bold">
+        <h2 className="text-4xl max-md:text-2xl text-center text-accent mb-16 font-bold">
           Liste des prorammes éducation
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

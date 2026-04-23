@@ -1,148 +1,114 @@
-// Composant contact
-"use client";
-
-import { contactSchema, ContactFormData } from "@/schema/contact";
-import { Button } from "../ui/button";
-import { Card } from "../ui/card";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
-import { Send } from "lucide-react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { contactSchema, ContactFormData } from "../../schema/contact";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Button } from "../ui/button";
+import { Label } from "../ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
-export default function Contact() {
+export default function ContactForm() {
+  const [result, setResult] = useState("");
+
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
-    mode: "onChange",
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log("Submitting form with data", data);
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message);
+    formData.append("access_key", "9f61db8b-108b-4771-b30b-d250af190b1f");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const responseData = await response.json();
+    setResult(responseData.success ? "Success!" : "Error");
   };
+
   return (
     <>
-      <section className="py-24 px-6 md:px-10 bg-gray-50 flex flex-col justify-center items-center space-y-12">
-        {/* titre et description */}
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-primary">
-            Contactez-nous
-          </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Vous avez des questions ou souhaitez collaborer avec nous ?
-            N&apos;hésitez pas à nous envoyer un message via ce formulaire.
-          </p>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full mt-4"></div>
-        </div>
-
-        <Card className="w-full bg-white p-8 md:p-10 shadow-lg rounded-3xl border border-gray-100 relative overflow-hidden">
-          {/* Decorative gradients */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
-
-          {/* formulaire */}
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            <div className="space-y-2">
-              <Label htmlFor="name" className="text-primary font-semibold">
-                Prénom et nom
-              </Label>
-              <Input
-                type="text"
-                id="name"
-                required
-                {...register("nom_complet")}
-                placeholder="Votre nom"
-                className="py-6 px-4 bg-gray-50/50 border-gray-200 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-xl"
-              />
-              {errors.nom_complet && (
-                <p className="text-red-700">{errors.nom_complet.message}</p>
-              )}
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-primary font-semibold">
-                Email
-              </Label>
-              <Input
-                type="email"
-                id="email"
-                required
-                {...register("email")}
-                placeholder="votre@email.com"
-                className="py-6 px-4 bg-gray-50/50 border-gray-200 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-xl"
-              />
-              {errors.email && (
-                <p className="text-red-700">{errors.email.message}</p>
-              )}
-            </div>
-
-            <div className="space-y-2 md:col-span-2">
-              <Label htmlFor="phone" className="text-primary font-semibold">
-                Téléphone
-              </Label>
-              <Input
-                type="tel"
-                id="phone"
-                {...register("phone")}
-                placeholder="Votre numéro téléphone"
-                required
-                className="py-6 px-4 bg-gray-50/50 border-gray-200 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-xl"
-              />
-              {errors.phone && (
-                <p className="text-red-700">{errors.phone.message}</p>
-              )}
-            </div>
-
-            <div className="space-y-2 md:col-span-2">
-              <Label htmlFor="subject" className="text-primary font-semibold">
-                Sujet
-              </Label>
-              <Input
-                type="text"
-                id="subject"
-                {...register("sujet")}
-                placeholder="Sujet de votre message"
-                required
-                className="py-6 px-4 bg-gray-50/50 border-gray-200 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-xl"
-              />
-              {errors.sujet && (
-                <p className="text-red-700">{errors.sujet.message}</p>
-              )}
-            </div>
-
-            <div className="space-y-2 md:col-span-2">
-              <Label htmlFor="message" className="text-primary font-semibold">
-                Message
-              </Label>
-              <textarea
-                id="message"
-                {...register("message")}
-                required
-                placeholder="Comment pouvons-nous vous aider ?"
-                className="w-full min-h-[150px] p-4 bg-gray-50/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 transition-all resize-y"
-              ></textarea>
-              {errors.message && (
-                <p className="text-red-700">{errors.message.message}</p>
-              )}
-            </div>
-
-            <div className="md:col-span-2 pt-4">
-              <Button
-                disabled={isSubmitting}
-                type="submit"
-                className="w-full sm:w-auto text-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl rounded-full px-10 py-6 font-bold group cursor-pointer"
-              >
-                Envoyer le message
-                <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </Button>
-            </div>
-          </form>
+      <section className="flex flex-col justify-center items-center px-10 py-16">
+        <Card className="max-w-xl min-w-xl bg-white">
+          <CardHeader className="p-5">
+            <CardTitle className="text-2xl text-center font-bold">
+              CONTATEZ-NOUS
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-2.5">
+              <div>
+                <Label htmlFor="name" className="text-lg">
+                  Prénom & nom <span className="text-red-800">*</span>
+                </Label>
+                <Input
+                  id="name"
+                  type="text"
+                  {...register("name")}
+                  placeholder="Entrer votre prénom et nom"
+                  className={`border-gray-300 ${errors.name ? "border-red-500" : ""}`}
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.name.message}
+                  </p>
+                )}
+              </div>
+              <div>
+                <Label htmlFor="email" className="text-lg">
+                  Email <span className="text-red-800">*</span>
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  {...register("email")}
+                  placeholder="Entrez votre email"
+                  className={`border-gray-300 ${errors.email ? "border-red-500" : ""}`}
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
+              <div>
+                <Label htmlFor="message" className="text-lg">
+                  Message <span className="text-red-800">*</span>
+                </Label>
+                <Textarea
+                  id="message"
+                  {...register("message")}
+                  placeholder="Ecrivez votre ici"
+                  className={`border-gray-300 h-32 ${errors.message ? "border-red-500" : ""}`}
+                />
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.message.message}
+                  </p>
+                )}
+              </div>
+              <div className="mt-5">
+                <Button
+                  size={"xl"}
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full text-lg cursor-pointer transition hover:bg-accent"
+                >
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+                </Button>
+              </div>
+              <p>{result}</p>
+            </form>
+          </CardContent>
         </Card>
       </section>
     </>

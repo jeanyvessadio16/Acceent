@@ -8,7 +8,7 @@ import { mediaLinks } from "@/data/footer/linkmedia";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-primary/80 backdrop-blur-md border-t border-white/10 text-white">
+    <footer className="w-full bg-black/95 backdrop-blur-md border-t border-white/10 text-white">
       {/* contenu principal */}
       <div className="px-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* logo */}

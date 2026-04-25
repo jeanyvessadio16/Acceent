@@ -4,7 +4,6 @@ import AboutPrgramme from "@/components/shared/AboutProgramme";
 import { Button } from "@/components/ui/button";
 import { tuttankActivity } from "@/data/education/tuttank";
 import { Metadata } from "next";
-import { Heart, BookOpen } from "lucide-react";
 import Link from "next/link";
 import {
   Card,

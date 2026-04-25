@@ -1,7 +1,14 @@
 // Page à propos
 
 import { type Section } from "@/types/section";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { programmes } from "@/data/programmeAcceent";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
@@ -21,7 +28,6 @@ export default function AboutSection({ description }: Section) {
               <h2 className="text-3xl md:text-6xl font-bold text-primary leading-tight">
                 Qui sommes-nous ?
               </h2>
-              {/* <div className="w-32 h-2 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div> */}
             </div>
             {/* Description */}
             <p className="text-lg md:text-xl md:text-justify leading-relaxed text-gray-700 max-w-3xl mx-auto">
@@ -109,7 +115,10 @@ export default function AboutSection({ description }: Section) {
 
                 <CardHeader className="relative z-10 flex flex-col items-center text-center pb-2 pt-6 px-6">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-md group-hover:bg-primary border border-primary/10 mb-3">
-                    <programme.icone className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" strokeWidth={1.75} />
+                    <programme.icone
+                      className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300"
+                      strokeWidth={1.75}
+                    />
                   </div>
                   <CardTitle className="text-lg font-bold text-accent capitalize group-hover:text-primary transition-colors duration-300">
                     {programme.title}

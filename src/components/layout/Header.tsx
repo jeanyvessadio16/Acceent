@@ -25,8 +25,10 @@ export default function Header() {
           <Image
             src="/logo/logo-acceent.png"
             alt="Logo Acceent"
-            width={130}
-            height={130}
+            width={80}
+            height={80}
+            priority
+            style={{ width: "auto", height: "auto" }}
           />
         </Link>
 
@@ -62,23 +64,21 @@ export default function Header() {
 
       {/* Menu mobile */}
       <nav>
-        <ul>
-          {isMenuOpen && (
-            <div className="fixed top-0 left-0 w-full h-screen bg-slate-950/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-6 z-40 px-6">
-              {navbarItems.map((item) => (
-                <li key={item.name} className="w-full">
-                  <Link
-                    href={item.href}
-                    className="block w-full text-center px-6 py-2 text-lg font-bold text-white hover:text-secondary transition-colors duration-300"
-                    onClick={() => setIsMenu(false)}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </div>
-          )}
-        </ul>
+        {isMenuOpen && (
+          <ul className="fixed top-0 left-0 w-full h-screen bg-slate-950/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-6 z-40 px-6">
+            {navbarItems.map((item) => (
+              <li key={item.name} className="w-full">
+                <Link
+                  href={item.href}
+                  className="block w-full text-center px-6 py-2 text-lg font-bold text-white hover:text-secondary transition-colors duration-300"
+                  onClick={() => setIsMenu(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
       </nav>
     </>
   );

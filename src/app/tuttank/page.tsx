@@ -65,7 +65,10 @@ export default function Acceent4ELLES() {
               {/* liste activités */}
               <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
                 {tuttankActivity.map((activity) => (
-                  <li key={activity.nom}>
+                  <li
+                    key={activity.nom}
+                    className="transition-all hover:bg-accent/10 cursor-pointer"
+                  >
                     <Card>
                       <CardHeader>
                         <p className="bg-accent/20 w-15 h-15  mx-auto flex flex-col justify-center items-center rounded-full">

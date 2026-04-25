@@ -1,10 +1,9 @@
 // Page à propos
 
 import { type Section } from "@/types/section";
-import { Card, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { programmes } from "@/data/programmeAcceent";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { aboutVision } from "@/data/aboutVision";
@@ -99,46 +98,39 @@ export default function AboutSection({ description }: Section) {
           </div>
 
           {/* Grille des programmes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {programmes.map((programme, idx) => (
               <Card
                 key={programme.id || idx}
-                className="group pt-0 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-0 flex flex-col h-full transform hover:-translate-y-3"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 ease-out border border-gray-100 flex flex-col h-full transform hover:-translate-y-1.5 hover:border-primary/30"
               >
-                {/* Image du programme */}
-                <div className="relative w-full h-56 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
-                  <Image
-                    src={programme.image}
-                    alt={programme.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute bottom-4 left-4 z-20">
-                    <h4 className="text-white text-2xl font-bold capitalize drop-shadow-lg">
-                      {programme.title}
-                    </h4>
-                  </div>
-                </div>
+                {/* Effet lumineux en arrière-plan au survol */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-2 -translate-y-2 pointer-events-none z-0"></div>
 
-                {/* Contenu de la carte */}
-                <div className="px-6 py-3 flex flex-col flex-grow">
-                  <CardDescription className="text-gray-600 mb-2 flex-grow leading-relaxed text-lg">
+                <CardHeader className="relative z-10 flex flex-col items-center text-center pb-2 pt-6 px-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-md group-hover:bg-primary border border-primary/10 mb-3">
+                    <programme.icone className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" strokeWidth={1.75} />
+                  </div>
+                  <CardTitle className="text-lg font-bold text-accent capitalize group-hover:text-primary transition-colors duration-300">
+                    {programme.title}
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="flex flex-col flex-grow relative z-10 text-center px-6 pb-4">
+                  <CardDescription className="text-gray-600 flex-grow leading-relaxed text-sm">
                     {programme.description}
                   </CardDescription>
-                  <Button
-                    variant="ghost"
-                    className="mt-auto self-start p-0 text-primary font-semibold hover:text-accent hover:bg-transparent group/btn h-auto transition-all duration-300"
+                </CardContent>
+
+                <CardFooter className="relative z-10 mt-auto px-6 py-4 border-t border-gray-100/50 flex justify-center">
+                  <Link
+                    href={programme.link}
+                    className="inline-flex items-center gap-1.5 text-sm text-primary font-semibold hover:text-accent transition-colors group/link"
                   >
-                    <Link
-                      href={programme.link}
-                      className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-primary/5 transition-colors"
-                    >
-                      Savoir plus
-                      <ChevronRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                    </Link>
-                  </Button>
-                </div>
+                    En savoir plus
+                    <ChevronRight className="w-4 h-4 transition-transform duration-300 ease-out group-hover/link:translate-x-1" />
+                  </Link>
+                </CardFooter>
               </Card>
             ))}
           </div>

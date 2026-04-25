@@ -1,6 +1,6 @@
 // Composant about
 
-import AboutSection from "@/pages/Aboutsection";
+import AboutSection from "@/components/sections/AboutSection";
 
 export default function About() {
   const aboutData = {

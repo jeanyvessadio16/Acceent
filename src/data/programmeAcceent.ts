@@ -1,5 +1,5 @@
 import { Programme } from "@/types/programme";
-
+import { BookOpen, Briefcase, Globe } from "lucide-react";
 export const programmes: Programme[] = [
   {
     id: 1,
@@ -7,7 +7,7 @@ export const programmes: Programme[] = [
     description:
       "Formations adaptées et accompagnement éducatif pour renforcer les capacités et l'autonomie des jeunes en milieu rural.",
     link: "/education",
-    image: "/image/education.jpg",
+    icone: BookOpen,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const programmes: Programme[] = [
     description:
       "Soutien au développement de projets entrepreneuriaux et accompagnement des jeunes entrepreneurs dans leur parcours de création d'entreprise.",
     link: "/entreprenariat",
-    image: "/image/entreprenariat.jpeg",
+    icone: Briefcase,
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const programmes: Programme[] = [
     description:
       "Accès à la formation numérique et transformation digitale pour développer les compétences technologiques et stimuler l'innovation locale.",
     link: "/numerique",
-    image: "/image/wro.webp",
+    icone: Globe,
   },
   // {
   //   id: 4,

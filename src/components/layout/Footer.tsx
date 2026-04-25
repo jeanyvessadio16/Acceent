@@ -18,6 +18,7 @@ export default function Footer() {
             alt="Logo Acceent"
             width={150}
             height={50}
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
         {/* programmes */}

@@ -3,7 +3,7 @@ import { BookOpen, Briefcase, Globe } from "lucide-react";
 export const programmes: Programme[] = [
   {
     id: 1,
-    title: "éducation",
+    title: "Education",
     description:
       "Formations adaptées et accompagnement éducatif pour renforcer les capacités et l'autonomie des jeunes en milieu rural.",
     link: "/education",
@@ -25,15 +25,6 @@ export const programmes: Programme[] = [
     link: "/numerique",
     icone: Globe,
   },
-  // {
-  //   id: 4,
-  //   title: "Atelier entrepreneuriat",
-  //   description:
-  //     "Encourager l'esprit d'entreprise chez les jeunes de Ziguinchor, moments forts à revivre.",
-  //   imageUrl: "/image/entreprenariat.jpeg",
-  //   link: "/Décourir-Atelier-entrepreneuriat",
-  //   category: "Entreprenariat",
-  // },
   // {
   //   id: 5,
   //   title: "Carnaval de Santhiaba",
@@ -60,14 +51,5 @@ export const programmes: Programme[] = [
   //   imageUrl: "/image/yaakarr.png",
   //   link: "/Décourir-YAAKAAR-Jeunesse-&-Entrepreneuriat-(YEAH)",
   //   category: "Entreprenariat",
-  // },
-  // {
-  //   id: 8,
-  //   title: "World Robot Olympiad (WRO)",
-  //   description:
-  //     "Compétition internationale de robotique éducative pour stimuler la créativité et l'innovation technologique chez les jeunes.",
-  //   imageUrl: "/image/wro.webp",
-  //   link: "/Décourir-World-Robot-Olympiad-(WRO)",
-  //   category: "Technologie",
   // },
 ];

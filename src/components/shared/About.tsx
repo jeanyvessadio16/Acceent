@@ -6,7 +6,7 @@ export default function About() {
   const aboutData = {
     title: "À propos de ACCEENT",
     description:
-      "Acceent est une association sénégalaise située à Ziguinchor, dans le quartier de Santhiaba. Elle œuvre principalement dans les domaines de l'éducation, de la culture, de l'entrepreneuriat, du développement durable et du numérique. Son approche se distingue par un ancrage local fort et une volonté de promouvoir une transformation sociale inclusive et durable. Pour découvrir nos actions concrètes, visitez ACCEENT4ELLES, TUT'TANK et notre programme d'incubation ACCEENT'INCUB.",
+      "ACCEENT est une association située à Ziguinchor, dans le quartier de Santhiaba. Elle œuvre principalement dans le domaine de l'éducation, l'entrepreneuriat, du numérique et de la culture. Notre approche se distingue par un ancrage local fort et une volonté de promouvoir une transformation sociale inclusive et durable. Pour découvrir nos actions concrètes, visitez ACCEENT4ELLES, TUT'TANK et notre programme d'incubation ACCEENT'INCUB.",
     imageUrl: "/image/aboutImage.jpg",
   };
 

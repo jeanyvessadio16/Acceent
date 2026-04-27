@@ -17,4 +17,12 @@ export const educationPrograms: programmesEducation[] = [
     image: "/image/tut-tank.jpeg",
     lien: "/tuttank",
   },
+  {
+    id: 3,
+    titre: "Forum des acteurs locaux",
+    description:
+      "Rencontres et échanges autour du développement local à Ziguinchor.",
+    image: "/image/forum.jpeg",
+    lien: "",
+  },
 ];

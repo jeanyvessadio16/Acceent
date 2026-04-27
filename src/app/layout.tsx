@@ -10,7 +10,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "ACCEENT",
   description:
-    "ACCEENT est une association à Ziguinchor qui œuvre pour l'éducation, la culture, l'entrepreneuriat et le numérique. Découvrez nos programmes ACCEENT4ELLES, TUT'TANK, ACCEENT'INCUB et nos actions locales pour le développement du territoire sénégalais.",
+    "ACCEENT est une association qui œuvre dans le domaine l'éducation, l'entrepreneuriat, du numérique et de la culture. Dans chaque domaine ACCEENT propose des programmes qui ciblent les jeunes et les femmes. L'association est située à Ziguinchor dans le quartier de Santhiaba.",
 };
 
 export default function RootLayout({

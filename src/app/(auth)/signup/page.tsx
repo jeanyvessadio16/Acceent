@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Signup() {
   return (
     <>
-      <section className="min-h-screen flex flex-col justify-center items-center">
+      <section className="min-h-screen my-10 flex flex-col justify-center items-center">
         <Card className="md:w-xl p-5 bg-white">
           <CardHeader>
             <CardTitle className="text-center text-2xl font-bold uppercase italic">
@@ -32,6 +32,7 @@ export default function Signup() {
                     name="prenom"
                     required
                     placeholder="Votre prénom"
+                    disabled
                     className=""
                   />
                 </div>
@@ -45,6 +46,7 @@ export default function Signup() {
                     name="nom"
                     required
                     placeholder="Votre nom"
+                    disabled
                     className=""
                   />
                 </div>
@@ -59,6 +61,7 @@ export default function Signup() {
                   name="adresse"
                   required
                   placeholder="Votre adresse"
+                  disabled
                   className=""
                 />
               </div>
@@ -74,6 +77,7 @@ export default function Signup() {
                     name="email"
                     required
                     placeholder="Votre email"
+                    disabled
                     className=""
                   />
                 </div>
@@ -88,6 +92,7 @@ export default function Signup() {
                     name="password"
                     required
                     placeholder="Votre mot de passe"
+                    disabled
                     className=""
                   />
                 </div>
@@ -98,6 +103,7 @@ export default function Signup() {
                 <Button
                   type="submit"
                   size={"xl"}
+                  disabled
                   className="w-full text-lg hover:bg-blue-950 cursor-pointer"
                 >
                   S&apos;inscrire

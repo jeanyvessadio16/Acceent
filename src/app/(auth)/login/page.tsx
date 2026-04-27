@@ -41,6 +41,7 @@ export default function Login() {
                     name="email"
                     required
                     placeholder="Votre email"
+                    disabled
                     className=""
                   />
                 </div>
@@ -55,6 +56,7 @@ export default function Login() {
                     name="password"
                     required
                     placeholder="Votre mot de passe"
+                    disabled
                     className=""
                   />
                 </div>
@@ -66,6 +68,7 @@ export default function Login() {
                   type="submit"
                   size={"xl"}
                   className="w-full text-lg hover:bg-blue-950 cursor-pointer"
+                  disabled
                 >
                   Se connecter
                 </Button>

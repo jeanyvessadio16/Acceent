@@ -1,3 +1,4 @@
+import Header from "@/components/layout/Header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function AuthLayout({
 }>) {
   return (
     <>
+      <Header />
       <main className="bg-black">{children}</main>
     </>
   );

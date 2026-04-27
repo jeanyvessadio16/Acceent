@@ -82,24 +82,6 @@ export function CulturalEngagementSection() {
                 </p>
               </div>
             </div>
-
-            {/* Floating Card 2 */}
-            <div
-              className="absolute -bottom-8 -left-6 lg:-left-12 glass-card p-4 rounded-2xl flex items-center gap-4 animate-float z-30 shadow-xl border border-white/50 hidden md:flex"
-              style={{ animationDelay: "1.5s" }}
-            >
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <p className="text-xs text-gray-500 uppercase font-semibold tracking-wider">
-                  Impact
-                </p>
-                <p className="text-foreground font-bold text-sm">
-                  Développement Local
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column : Text Content */}
@@ -135,21 +117,6 @@ export function CulturalEngagementSection() {
                 institutionnels pour discuter et repenser le rôle de la culture
                 dans le développement de nos territoires.
               </p>
-            </div>
-
-            <div className="pt-6 grid grid-cols-2 gap-6 border-t border-gray-100">
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-primary">100%</div>
-                <div className="text-sm font-medium text-gray-500 uppercase tracking-wide">
-                  Engagement Local
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-secondary">+10</div>
-                <div className="text-sm font-medium text-gray-500 uppercase tracking-wide">
-                  Projets Culturels
-                </div>
-              </div>
             </div>
           </div>
         </div>

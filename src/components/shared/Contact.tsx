@@ -207,7 +207,7 @@ export default function ContactForm() {
                         size="lg"
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full h-14 rounded-xl text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-lg transition-all hover:-translate-y-1 flex items-center justify-center gap-2 group"
+                        className="w-full h-14 rounded-xl text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-lg transition-all hover:-translate-y-1 flex items-center justify-center gap-2 group cursor-pointer"
                       >
                         {isSubmitting ? (
                           "Envoi en cours..."

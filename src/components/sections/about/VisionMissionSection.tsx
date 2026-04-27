@@ -41,10 +41,7 @@ export function VisionMissionSection() {
               </div>
 
               <h2 className="text-3xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
-                Catalyser le{" "}
-                <span className="bg-clip-text bg-gradient-to-r">
-                  changement
-                </span>
+                Autonomiser les jeunes et les femmes{" "}
               </h2>
             </div>
 

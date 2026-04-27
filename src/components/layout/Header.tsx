@@ -31,7 +31,7 @@ export default function Header() {
       <header
         className={`w-full flex justify-between items-center px-4 sm:px-6 md:px-10 py-3 fixed top-0 left-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-lg py-2"
+            ? "bg-[#212E53] backdrop-blur-xl border-b border-white/10 shadow-lg py-2"
             : "bg-transparent py-4"
         }`}
       >
@@ -86,7 +86,7 @@ export default function Header() {
       {/* Menu mobile */}
       <nav>
         <div
-          className={`fixed inset-0 bg-black/95 backdrop-blur-3xl z-40 transition-all duration-500 ease-in-out flex flex-col items-center justify-center ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+          className={`fixed inset-0 bg-[#212E53]/95 backdrop-blur-3xl z-40 transition-all duration-500 ease-in-out flex flex-col items-center justify-center ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
         >
           <ul className="flex flex-col items-center justify-center gap-8 px-6 w-full max-w-md">
             {navbarItems.map((item, index) => (
@@ -101,7 +101,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="inline-block text-3xl font-bold text-white hover:text-purple-300 transition-colors duration-300 link-underline pb-2"
+                  className="inline-block text-lg font-bold text-white hover:text-purple-300 transition-colors duration-300 link-underline pb-2"
                   onClick={() => setIsMenu(false)}
                 >
                   {item.name}

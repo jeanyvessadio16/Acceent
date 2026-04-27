@@ -25,7 +25,7 @@ export default function AboutSection({ description }: Section) {
           <div className="space-y-8">
             {/* Titre */}
             <div className="space-y-4">
-              <h2 className="max-md:text-2xl md:text-6xl font-bold text-primary leading-tight">
+              <h2 className="text-2xl md:text-6xl font-bold text-primary leading-tight">
                 Qui sommes-nous ?
               </h2>
             </div>

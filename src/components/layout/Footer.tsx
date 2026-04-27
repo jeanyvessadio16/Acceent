@@ -38,15 +38,15 @@ export default function Footer() {
           <h3 className="text-2xl font-bold mb-2">Contact</h3>
           <ul className="space-y-3 flex flex-col">
             <li className="flex items-center gap-3">
-              <MapPin />
+              <MapPin size={20} />
               <span>Quartier Santhiaba, Ziguinchor, Sénégal</span>
             </li>
             <li className="flex items-center gap-3">
-              <Phone />
+              <Phone size={20} />
               <span>+33 1 23 45 67 89 / +221 76 141 70 70</span>
             </li>
             <li className="flex items-center gap-3">
-              <Mail />
+              <Mail size={20} />
               <span>info@acceent.org</span>
             </li>
           </ul>

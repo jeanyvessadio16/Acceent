@@ -23,6 +23,6 @@ export const entreprenariatPrograms: programmesEducation[] = [
     description:
       "Programme d'accompagnement des jeunes sénégalais dans l'entrepreneuriat agricole et le développement durable.",
     image: "/image/yaakarr.png",
-    lien: "/atelier",
+    lien: "https://www.consortiumjeunessesenegal.org/yaakaar-jeunesse-entrepreneuriat/",
   },
 ];

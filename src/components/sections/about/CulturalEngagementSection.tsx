@@ -91,7 +91,7 @@ export function CulturalEngagementSection() {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/20 text-primary font-medium text-sm shadow-sm">
                 <Sparkles className="w-4 h-4" />
-                <span>Notre Vision</span>
+                <span>Culture</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Engagement <br />

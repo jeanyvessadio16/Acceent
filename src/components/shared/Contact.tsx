@@ -71,7 +71,7 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-stretch">
             {/* Colonne de gauche: Infos de contact */}
-            <div className="lg:col-span-2 bg-gradient-to-br from-primary to-blue-900 rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden animate-slide-left">
+            <div className="lg:col-span-2 bg-gradient-to-br from-primary to-blue-950 rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden animate-slide-left">
               <div className="absolute top-0 right-0 opacity-10 transform translate-x-1/3 -translate-y-1/4">
                 <svg
                   width="300"

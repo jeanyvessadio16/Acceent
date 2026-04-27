@@ -36,6 +36,7 @@ export default function Education() {
                 <Button variant="outline" asChild>
                   <Link
                     href={programme.lien}
+                    target="_blank"
                     className="text-blue-500 hover:underline"
                   >
                     En savoir plus

@@ -19,9 +19,6 @@ export default function AcceentIncubProgramme() {
   };
   return (
     <>
-      {/* header */}
-      <Header />
-
       {/* Hero Section */}
       <section
         style={{ backgroundImage: "url(/image/acceent-incub.jpeg)" }}
@@ -78,9 +75,6 @@ export default function AcceentIncubProgramme() {
           <Link href="/atelier">Atelier entreprenariat</Link>
         </Button>
       </div>
-
-      {/* footer */}
-      <Footer />
     </>
   );
 }

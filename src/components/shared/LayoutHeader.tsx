@@ -1,10 +1,8 @@
 import { EducationHeader } from "@/types/bannerHeader";
-import Header from "../layout/Header";
 
 export default function LayoutHeader({ titre, image }: EducationHeader) {
   return (
     <>
-      <Header />
       <div
         style={{ backgroundImage: `url(${image})` }}
         className="relative w-full min-h-96 px-6 md:px-24 py-5 flex items-center justify-center bg-cover bg-center bg-no-repeat"

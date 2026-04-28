@@ -1,5 +1,3 @@
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import AboutPrgramme from "@/components/shared/AboutProgramme";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,9 +22,6 @@ export default function Acceent4ELLES() {
   };
   return (
     <>
-      {/* header */}
-      <Header />
-
       {/* Hero Section */}
       <section
         style={{ backgroundImage: "url(/image/acceentImage.jpg)" }}
@@ -134,9 +129,6 @@ export default function Acceent4ELLES() {
           <Link href="/tuttank">Programme TUT&apos;TANK</Link>
         </Button>
       </div>
-
-      {/* footer */}
-      <Footer />
     </>
   );
 }

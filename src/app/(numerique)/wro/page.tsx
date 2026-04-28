@@ -4,32 +4,32 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ACCEENT - Atelier entreprenariat",
-  description: "Atelier Entreprenariat",
+  title: "ACCEENT - World Robot Olympiad",
+  description: "",
 };
 
-export default function AtelierEntreprenariatProgramme() {
+export default function WROProgramme() {
   const acceent4elles = {
-    titre: "À propos du programme",
+    titre: "À propos du programme  WRO",
     description:
-      "L'Atelier de l'Entrepreneriat est un programme d'échange, de formation et d'accompagnement dédié aux jeunes porteurs de projets désireux de transformer leurs idées en réalisations concrètes. Chaque participant est guidé, outillé et encouragé à chaque étape de son parcours entrepreneurial. L'objectif est de rendre les jeunes plus autonome économiquement et de participer au développement de leur localité.",
+      "Une compétition de robotique véritablement mondiale dédiée à la science, à la technologie et à l'éducation. Notre mission est d'aider les jeunes à développer leur créativité et leur capacité à résoudre des problèmes de manière ludique et stimulante. Pour ce faire, nous organisons des concours de robotique dans quatre catégories différentes pour les élèves de 8 à 19 ans. L'Association World Robot Olympiad™ est une organisation indépendante à but non lucratif. Tous les revenus des parrainages et des cotisations sont investis dans notre mission : promouvoir la robotique dans l'enseignement des STEM (sciences, technologie, ingénierie et mathématiques) à travers le monde.",
   };
   return (
     <>
       {/* Hero Section */}
       <section
-        style={{ backgroundImage: "url(/image/entreprenariat.jpeg)" }}
+        style={{ backgroundImage: "url(/image/wro.webp)" }}
         className="relative bg-cover bg-center bg-fixed py-20 md:py-28 overflow-hidden"
       >
         <div className="mx-auto px-6 md:px-10 relative text-white z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="space-y-4">
               <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Atelier entreprenariat
+                World Robot Olympiad
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-                Encourager la créativité et l&apos;innonvation chez les jeunes
-                de Ziguinchor
+                Développer la créativité et la compétence en résolution de
+                problème chez les jeunes
               </p>
             </div>
           </div>
@@ -43,19 +43,10 @@ export default function AtelierEntreprenariatProgramme() {
           <div className="flex flex-col justify-center items-center">
             {/* programme */}
             <div className="space-y-6">
-              <div className="flex justify-center items-center space-x-3">
-                <h2 className="text-2xl font-bold text-accent">Galerie</h2>
-              </div>
+              <div className="flex justify-center items-center space-x-3"></div>
             </div>
           </div>
         </AboutPrgramme>
-      </div>
-
-      {/* lien vers TUT'TANK */}
-      <div className="p-10 flex flex-col justify-center items-center">
-        <Button asChild size={"xl"} className="mx-auto bg-accent">
-          <Link href="/atelier">Atelier entreprenariat</Link>
-        </Button>
       </div>
     </>
   );

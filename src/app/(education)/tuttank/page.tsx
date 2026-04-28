@@ -1,5 +1,3 @@
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import AboutPrgramme from "@/components/shared/AboutProgramme";
 import { Button } from "@/components/ui/button";
 import { tuttankActivity } from "@/data/education/tuttank";
@@ -26,9 +24,6 @@ export default function Acceent4ELLES() {
   };
   return (
     <>
-      {/* header */}
-      <Header />
-
       {/* Hero Section */}
       <section
         style={{ backgroundImage: "url(/image/tut-tank.jpeg)" }}
@@ -99,9 +94,6 @@ export default function Acceent4ELLES() {
           <Link href="/">Autres programmes</Link>
         </Button>
       </div>
-
-      {/* footer */}
-      <Footer />
     </>
   );
 }

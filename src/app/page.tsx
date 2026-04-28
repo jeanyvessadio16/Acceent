@@ -1,7 +1,5 @@
 "use client";
 
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import About from "@/components/shared/About";
 import Contact from "@/components/shared/Contact";
 import Partenaire from "@/components/shared/Partenaire";
@@ -25,8 +23,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Header */}
-      <Header />
       {/* Page d'acceuil */}
       <main className="w-full flex flex-col overflow-hidden">
         {/* HERO SECTION */}
@@ -69,7 +65,7 @@ export default function Home() {
                 asChild
               >
                 <Link
-                  href="#about"
+                  href="#programmes"
                   className="flex items-center justify-center gap-3"
                 >
                   Découvrir nos programmes
@@ -102,9 +98,6 @@ export default function Home() {
           <Contact />
         </section>
       </main>
-
-      {/* Footer */}
-      <Footer />
     </>
   );
 }

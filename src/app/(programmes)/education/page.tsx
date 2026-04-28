@@ -6,6 +6,11 @@ import { educationPrograms } from "@/data/education/education";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ACCEENT -  Education",
+};
 
 const educationHeader = {
   titre: "Programmes d'éducation",

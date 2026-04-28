@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function WROProgramme() {
   const acceent4elles = {
-    titre: "À propos du programme  WRO",
+    titre: "À propos de  WRO",
     description:
       "Une compétition de robotique véritablement mondiale dédiée à la science, à la technologie et à l'éducation. Notre mission est d'aider les jeunes à développer leur créativité et leur capacité à résoudre des problèmes de manière ludique et stimulante. Pour ce faire, nous organisons des concours de robotique dans quatre catégories différentes pour les élèves de 8 à 19 ans. L'Association World Robot Olympiad™ est une organisation indépendante à but non lucratif. Tous les revenus des parrainages et des cotisations sont investis dans notre mission : promouvoir la robotique dans l'enseignement des STEM (sciences, technologie, ingénierie et mathématiques) à travers le monde.",
   };

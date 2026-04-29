@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         {/* programmes */}
         <div>
-          <h3 className="text-2xl font-bold mb-2">Programmes</h3>
+          <h3 className="text-2xl max-md:text-xl font-bold mb-2">Programmes</h3>
           <ul className="space-y-3">
             {programmes.map((programme) => (
               <li key={programme.name}>
@@ -35,7 +35,7 @@ export default function Footer() {
 
         {/* contact */}
         <div className="flex flex-col">
-          <h3 className="text-2xl font-bold mb-2">Contact</h3>
+          <h3 className="text-2xl max-md:text-xl font-bold mb-2">Contact</h3>
           <ul className="space-y-3 flex flex-col">
             <li className="flex items-center gap-3">
               <MapPin size={20} />
@@ -54,7 +54,9 @@ export default function Footer() {
 
         {/* reséaux sociaux */}
         <div>
-          <h3 className="text-2xl font-bold mb-2">Suivez-nous</h3>
+          <h3 className="text-2xl max-md:text-xl font-bold mb-2">
+            Suivez-nous
+          </h3>
           <ul className="flex gap-3">
             {mediaLinks.map((link) => (
               <li key={link.name} className="p-2 bg-white/50 rounded">

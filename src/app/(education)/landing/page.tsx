@@ -7,6 +7,8 @@ import {
 import { Metadata } from "next";
 import { Target, Heart, BookOpen, Award } from "lucide-react";
 import Link from "next/link";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "ACCEENT4ELLES",
@@ -22,6 +24,9 @@ export default function Acceent4ELLES() {
   };
   return (
     <>
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section
         style={{ backgroundImage: "url(/image/acceentImage.jpg)" }}
@@ -129,6 +134,9 @@ export default function Acceent4ELLES() {
           <Link href="/tuttank">Programme TUT&apos;TANK</Link>
         </Button>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

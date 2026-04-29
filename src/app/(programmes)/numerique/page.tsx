@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { numeriquePrograms } from "@/data/numerique/programmes";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const numeriqueHeader = {
   titre: "Programme numérique",
@@ -15,6 +17,9 @@ const numeriqueHeader = {
 export default function Numerique() {
   return (
     <>
+      {/* Header */}
+      <Header />
+
       <LayoutHeader {...numeriqueHeader}></LayoutHeader>
       <section className="px-10 py-16">
         <h2 className="text-4xl max-md:text-2xl text-center text-accent mb-16 font-bold">
@@ -46,6 +51,9 @@ export default function Numerique() {
           ))}
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

@@ -7,11 +7,13 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -93,6 +95,14 @@ export default function SignUpPage() {
             </div>
           </form>{" "}
         </CardContent>
+        <CardFooter className="border-none">
+          <CardDescription className="mx-auto text-lg">
+            Vous avez déjà un compte?{" "}
+            <Link href="/sign-in" className="hover:text-blue-800">
+              Se connecter
+            </Link>
+          </CardDescription>
+        </CardFooter>
       </Card>
     </main>
   );

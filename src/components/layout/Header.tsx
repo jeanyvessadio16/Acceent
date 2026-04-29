@@ -22,7 +22,6 @@ export default function Header() {
   const navbarItems = [
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/#about" },
-    { name: "Inscription", href: "/sign-up" },
     { name: "Contact", href: "/#contact" },
   ];
 

@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import AboutPrgramme from "@/components/shared/AboutProgramme";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
@@ -16,6 +18,9 @@ export default function AtelierEntreprenariatProgramme() {
   };
   return (
     <>
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section
         style={{ backgroundImage: "url(/image/entreprenariat.jpeg)" }}
@@ -57,6 +62,9 @@ export default function AtelierEntreprenariatProgramme() {
           <Link href="/atelier">Atelier entreprenariat</Link>
         </Button>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

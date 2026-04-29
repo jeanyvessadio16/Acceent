@@ -1,10 +1,12 @@
 "use client";
 
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import About from "@/components/shared/About";
 import Contact from "@/components/shared/Contact";
 import Partenaire from "@/components/shared/Partenaire";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -23,6 +25,9 @@ export default function Home() {
 
   return (
     <>
+      {/* Header */}
+      <Header />
+
       {/* Page d'acceuil */}
       <main className="w-full flex flex-col overflow-hidden">
         {/* HERO SECTION */}
@@ -44,7 +49,7 @@ export default function Home() {
 
           {/* Contenu */}
           <div className="relative z-10 w-full px-4 sm:px-6 md:px-10 flex flex-col items-center text-center space-y-6 max-w-5xl mx-auto mt-16">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white max-w-5xl leading-[1.1] animate-hero-title drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white max-w-5xl leading-[1.1] animate-hero-title drop-shadow-2xl">
               Bienvenue à <br className="hidden md:block" />
               <strong className="bg-clip-text uppercase inline-block animate-float">
                 ACCEENT
@@ -69,7 +74,7 @@ export default function Home() {
                   className="flex items-center justify-center gap-3"
                 >
                   Découvrir nos programmes
-                  <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-300 group-hover:translate-x-2" />
+                  <ArrowDown className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-300 group-hover:translate-x-2" />
                 </Link>
               </Button>
             </div>
@@ -98,6 +103,9 @@ export default function Home() {
           <Contact />
         </section>
       </main>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

@@ -1,3 +1,5 @@
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import AboutPrgramme from "@/components/shared/AboutProgramme";
 import { Metadata } from "next";
 
@@ -14,6 +16,9 @@ export default function WROProgramme() {
   };
   return (
     <>
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section
         style={{ backgroundImage: "url(/image/wro.webp)" }}
@@ -46,6 +51,9 @@ export default function WROProgramme() {
           </div>
         </AboutPrgramme>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

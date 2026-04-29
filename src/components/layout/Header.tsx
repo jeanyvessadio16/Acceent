@@ -22,13 +22,14 @@ export default function Header() {
   const navbarItems = [
     { name: "Accueil", href: "/" },
     { name: "À propos", href: "/#about" },
+    { name: "Inscription", href: "/sign-up" },
     { name: "Contact", href: "/#contact" },
   ];
 
   return (
     <>
       <header
-        className={`w-full flex justify-between items-center px-4 sm:px-6 md:px-10 py-3 fixed top-0 left-0 z-50 transition-all duration-500 ${
+        className={`w-full flex justify-between items-center px-4 sm:px-6 md:px-10 py-2 fixed top-0 left-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-[#212E53] backdrop-blur-xl border-b border-white/10 shadow-lg py-2"
             : "bg-transparent py-4"
@@ -66,7 +67,7 @@ export default function Header() {
 
         {/* Menu de navigation */}
         <nav className="max-md:hidden">
-          <ul className="flex items-center gap-6 lg:gap-10 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-inner">
+          <ul className="flex items-center gap-6 lg:gap-10 bg-white/5 backdrop-blur-md px-8 py-2 rounded-full border border-white/10 shadow-inner">
             {navbarItems.map((item) => (
               <li key={item.name}>
                 <Link

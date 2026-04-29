@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { entreprenariatPrograms } from "@/data/entreprenariat/programmes";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const educationHeader = {
   titre: "Programme entreprenariat",
@@ -15,6 +17,9 @@ const educationHeader = {
 export default function Education() {
   return (
     <>
+      {/* Header */}
+      <Header />
+
       <LayoutHeader {...educationHeader}></LayoutHeader>
       <section className="px-10 py-16">
         <h2 className="text-4xl max-md:text-2xl text-center text-accent mb-16 font-bold">
@@ -36,7 +41,6 @@ export default function Education() {
                 <Button variant="outline" asChild>
                   <Link
                     href={programme.lien}
-                    target="_blank"
                     className="text-blue-500 hover:underline"
                   >
                     En savoir plus
@@ -47,6 +51,9 @@ export default function Education() {
           ))}
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

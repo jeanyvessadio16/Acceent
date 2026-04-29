@@ -10,6 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "ACCEENT - TUT'TANK",
@@ -24,6 +26,9 @@ export default function Acceent4ELLES() {
   };
   return (
     <>
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section
         style={{ backgroundImage: "url(/image/tut-tank.jpeg)" }}
@@ -94,6 +99,9 @@ export default function Acceent4ELLES() {
           <Link href="/">Autres programmes</Link>
         </Button>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

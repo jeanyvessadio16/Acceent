@@ -1,6 +1,6 @@
 // Pieds de page ou footer
 
-import { Mail, MapPin, Phone, ChevronRight, Send } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { programmes } from "@/data/footer/programmes";

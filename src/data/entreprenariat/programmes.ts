@@ -19,10 +19,18 @@ export const entreprenariatPrograms: programmesEducation[] = [
   },
   {
     id: 3,
-    titre: "YAAKAAR Jeunesse & Entrepreneuriat (YEAH)",
+    titre: "YAAKAAR Jeunesse & Entrepreneuriat",
     description:
       "Programme d'accompagnement des jeunes sénégalais dans l'entrepreneuriat agricole et le développement durable.",
     image: "/image/yaakarr.png",
     lien: "https://www.consortiumjeunessesenegal.org/yaakaar-jeunesse-entrepreneuriat/",
+  },
+  {
+    id: 4,
+    titre: "Carnaval de Santhiaba",
+    description:
+      "Un moment fort pour la culture locale et la cohésion sociale, retour en images.",
+    image: "/image/carnaval.jpeg",
+    lien: "/culture",
   },
 ];

@@ -1,8 +1,8 @@
-export default function DashboardPage() {
+export default function RegisterPage() {
   return (
     <main>
       <section>
-        <h1>Dashboard page</h1>
+        <h1>Register page</h1>
       </section>
     </main>
   );
